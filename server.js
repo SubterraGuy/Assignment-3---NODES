@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Load data
-const paintings = require("./data/paintings.json");
+const paintings = require("./data/painting.json");
 const artists = require("./data/artists.json");
 const galleries = require("./data/galleries.json");
 
@@ -29,7 +29,7 @@ app.get("/api/painting/gallery/:id", (req, res) => {
     res.json(result);
 });
 
-app.get("/api/painting/artist/:id", (req, res) => {
+app.get("/api/paintings-nested/artist/:id", (req, res) => {
     const result = paintings.filter(p => p.artist.artistID == req.params.id);
     if (!result.length) return notFound(res);
     res.json(result);
