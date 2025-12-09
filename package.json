@@ -1,0 +1,12 @@
+{
+  "name": "comp3612-assignment3",
+  "version": "1.0.0",
+  "description": "COMP 3612 Assignment 3 - Node API for paintings, artists, and galleries",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
